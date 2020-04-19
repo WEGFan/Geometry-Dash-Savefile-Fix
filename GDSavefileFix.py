@@ -10,7 +10,7 @@ import zlib
 from textwrap import dedent
 from pathlib import Path
 
-__version__ = '1.1.0'
+__version__ = '1.1.1'
 
 SAVEFILE_NAME = ['CCGameManager.dat', 'CCLocalLevels.dat', 'CCGameManager2.dat', 'CCLocalLevels2.dat']
 SAVEFILE_PATH = Path(os.getenv('LocalAppData')) / 'GeometryDash'
