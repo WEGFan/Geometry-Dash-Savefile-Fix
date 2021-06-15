@@ -29,8 +29,7 @@ def main():
         """
     ))
 
-    print(f'Savefiles location: {SAVEFILE_PATH}')
-    print()
+    print(f'Savefiles location: {SAVEFILE_PATH}\n')
 
     os.chdir(SAVEFILE_PATH)
 
@@ -42,11 +41,10 @@ def main():
             shutil.copyfile(savefile, Path(backup_folder_name, savefile))
         except Exception as err:
             print(f'Failed to backup {savefile}!')
-    print(f'Savefiles backed up to {SAVEFILE_PATH / backup_folder_name}')
+    print(f'Savefiles backed up to {SAVEFILE_PATH / backup_folder_name}\n')
     print()
 
     input('Press ENTER to fix...')
-    print()
 
     for savefile in SAVEFILE_NAME:
         try:
@@ -85,8 +83,7 @@ def main():
             print(f'There is an issue fixing {savefile}!')
             traceback.print_exc()
 
-    print()
-    input('Done! Press ENTER to exit...')
+    input('\nDone! Press ENTER to exit...')
 
 
 if __name__ == '__main__':
@@ -95,6 +92,5 @@ if __name__ == '__main__':
     except (EOFError, KeyboardInterrupt) as err:
         sys.exit()
     except Exception as err:
-        print('Oops, something went wrong...')
-        print('Error message:')
+        print('Oops, something went wrong...\nError message:')
         traceback.print_exc()
