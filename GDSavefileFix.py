@@ -61,7 +61,7 @@ def main():
             decompressed_data = zlib.decompress(decoded_data[10:], -zlib.MAX_WBITS)
 
             # fix (i don't know why simply add spaces works...)
-            decompressed_data = decompressed_data.replace(b'><', b'> <', 50)
+            decompressed_data = decompressed_data.replace(b'><', b'> <')
 
             # encrypt
             compressed_data = zlib.compress(decompressed_data)
